@@ -15,7 +15,7 @@ export const blogPostQuery = graphql`
 
 const BlogTemplate = ({ data }) => {
     React.useEffect(() => {
-        gsap.fromTo('.page-wrapper', { opacity: 0 },{ opacity: 1, duration: .35 })
+        gsap.fromTo('.page-wrapper', { opacity: 0.25 },{ opacity: 1, duration: .20 })
     }, [])
     return (
         <Layout>
