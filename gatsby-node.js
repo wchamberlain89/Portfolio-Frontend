@@ -10,7 +10,16 @@ const path = require('path')
 exports.createPages = async ({ actions, graphql }) => {
     const result = await graphql(`
       {
-        allSanityProject {
+        projects: allSanityProject {
+          edges {
+            node {
+              slug {
+                current
+              }
+            }
+          }
+        }
+        posts: allSanityPost {
           edges {
             node {
               slug {
@@ -21,15 +30,25 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     `);
-  
-    const projects = result.data.allSanityProject.edges.map(({ node }) => node);
+
+    const projects = result.data.projects.edges.map(({ node }) => node);
+    const posts = result.data.posts.edges.map(({ node }) => node);
   
     projects.forEach(project => {
       actions.createPage({
-        path: project.slug.current,
-        component: path.resolve('./src/templates/project.js'),
+        path: `projects/${project.slug.current}`,
+        component: path.resolve('./src/pages/templates/project.js'),
         context: {
           slug: project.slug.current
+        }
+      });
+    });
+    posts.forEach(post => {
+      actions.createPage({
+        path: `/posts/${post.slug.current}`,
+        component: path.resolve('./src/pages/templates/post.js'),
+        context: {
+          slug: post.slug.current
         }
       });
     });
