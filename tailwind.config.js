@@ -10,9 +10,8 @@ module.exports = {
         ...theme('colors'),
          DEFAULT: theme('colors.gray.300', 'currentColor'),
         'primary': theme('colors.gray.900'),
-        'secondary': '#ffed4a',
+        'secondary': theme('colors.primary'),
         'accent': '#e3342f',
-        'sitePrimmary': '#FEE400'
       }),
       backgroundColor: theme => ({
       ...theme('colors'),
@@ -20,6 +19,11 @@ module.exports = {
       'secondary': '#FFEF66',
       'accent': theme('colors.gray.900'),
       }),
+      colors: {
+        primary: '#FEE400',
+        secondary: '#FFED4A',
+        // ...
+      },
       fontFamily: {
         'display': ['Rajdhani'],
         'body': ['Open Sans'],
@@ -45,6 +49,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      margin: ['last'],
       padding: ['last'],
       animation: ['hover', 'focus'],
       transitionTimingFunction: ['hover']

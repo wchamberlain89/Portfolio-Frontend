@@ -15,11 +15,11 @@ export const blogPostQuery = graphql`
 
 const BlogTemplate = ({ data }) => {
     React.useEffect(() => {
-        gsap.fromTo('.page-wrapper', { opacity: 0.25 },{ opacity: 1, duration: .20 })
+        gsap.fromTo('.page-wrapper', { opacity: 0 },{ opacity: 1, duration: .1})
     }, [])
     return (
         <Layout>
-            <div className='page-wrapper'>
+            <div className='page-wrapper' style={{ opacity: 0 }}>
                 <h1 className='mt-20'>{data.sanityPost.title}</h1>
                 <div className='max-w-4xl mx-auto mt-20'>
                     <PortableText

@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql }) => {
   
     projects.forEach(project => {
       actions.createPage({
-        path: `projects/${project.slug.current}`,
+        path: `/projects/${project.slug.current}`,
         component: path.resolve('./src/pages/templates/project.js'),
         context: {
           slug: project.slug.current

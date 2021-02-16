@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ children }) => {
+const Card = ({ children, className }) => {
     const ref = React.useRef(null);
 
     const handleAnimation = () => {
@@ -14,7 +14,7 @@ const Card = ({ children }) => {
 
     return (
         <div 
-            className='card__container bg-secondary border-2 border-primary ease-out w-full shadow-border transform transition-shadow duration-150'
+            className={`card__container bg-secondary border-2 border-primary ease-out w-full shadow-border transform transition-shadow duration-150 ${className}`}
             ref={ref}
             >
             { children }
