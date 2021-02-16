@@ -1,22 +1,20 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO/"
+import SEO from "../components/SEO"
 import TextBlock from "../components/TextBlock"
 import Card from '../components/Card'
 import BlogPreviewCard from "../components/BlogPreviewCard"
 
 export const query = graphql` 
-  query QUERY_ALL_POSTS {
-    allSanityPost {
+  query QUERY_ALL_PROJECTS {
+    posts: allSanityProject(sort: { fields: [_updatedAt], order: DESC}) {
       edges {
         node {
-          _rawBody
           title
           slug {
             current
           }
-          publishedAt
           mainImage {
             asset {
               fluid {
@@ -24,21 +22,28 @@ export const query = graphql`
               }
             }
           }
-          shortDescription
         }
       }
     }
   }    
 `
 
-const IndexPage = ({ data }) => (
+const ProjectsPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
-    <TextBlock body={'Portfolio is under construction XXXXX'}/>
-    <ul className='flex flex-wrap'>
-      
+    <SEO title="Projects" />
+    <TextBlock body={'Thank you for checking out my projects'}/>
+    <ul>
+      {data.posts.edges.map(({ node }) => (
+        <Link className='block mb-16' to={`/projects/${node.slug.current}`}>
+          <BlogPreviewCard
+            key={node.slug.current}  
+            image={node.mainImage.asset.fluid} 
+            title={node.title} 
+          />
+        </Link>
+      ))}
     </ul>
   </Layout>
 )
 
-export default IndexPage
+export default ProjectsPage

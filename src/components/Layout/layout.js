@@ -23,12 +23,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <PageContainer>
-        <main>{children}</main>
-      </PageContainer>
-    </>
+    <div id='page-wrap'>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`}/>
+        <main>
+          <PageContainer>
+            {children}
+          </PageContainer>
+        </main>
+    </div>
   )
 }
 

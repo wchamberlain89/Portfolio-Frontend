@@ -127,5 +127,6 @@ module.exports = {
         display: 'swap'
       }
     },
+    'gatsby-plugin-root-import'
   ],
 }
