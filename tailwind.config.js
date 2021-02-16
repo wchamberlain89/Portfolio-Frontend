@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        border: '-5px 5px black, -4px 4px black, -3px 3px black, -2px 2px black, -1px 1px black'
+        border: '-8px 8px black,-7px 7px black, -6px 6px black, -5px 5px black, -4px 4px black, -3px 3px black, -2px 2px black, -1px 1px black'
       },
       borderColor: theme => ({
         ...theme('colors'),
