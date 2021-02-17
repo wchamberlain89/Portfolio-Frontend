@@ -44,7 +44,7 @@ const ProjectTemplate = ({ data }) => {
             items-center lg:items-start  
             flex-col lg:flex-row 
             mb-40'>
-                <div className='project-template__left mb-8 w-5/6 lg:w-2/5 lg:mr-20 lg:sticky lg:top-20'>
+                <div className='project-template__left mb-8 lg:w-2/5 lg:mr-20 lg:sticky lg:top-36'>
                     <div className='project-template__main-image h-64'>
                         { mainImage && <Image className='w-full h-full border-4 border-gray-800' fluid={mainImage} /> }
                     </div>
