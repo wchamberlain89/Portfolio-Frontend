@@ -31,7 +31,7 @@ export const query = graphql`
 const ProjectsPage = ({ data }) => (
   <Layout>
     <SEO title="Projects" />
-    <TextBlock body={'Thank you for checking out my projects'}/>
+    <TextBlock body={'Thank you for checking out my projects'} />
     <ul>
       {data.posts.edges.map(({ node }) => (
         <Link className='block mb-16' to={`/projects/${node.slug.current}`}>

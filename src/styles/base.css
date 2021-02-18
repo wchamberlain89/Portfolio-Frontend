@@ -17,7 +17,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: hsla(0, 0%, 0%, 0.8);
-        font-family: georgia, serif;
+        font-family: 'Trebuchet MS', georgia, serif;
         font-weight: normal;
         word-wrap: break-word;
         font-kerning: normal;
@@ -191,6 +191,8 @@
         padding-right: 0;
         padding-top: 0;
         margin-bottom: 1.45rem;
+        font-size: 1.25rem;
+        line-height: 2;
       }
       pre {
         margin-left: 0;
@@ -227,7 +229,9 @@
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
+        font-size: 1.65rem;
         margin-bottom: 1.45rem;
+        font-weight: 200;
       }
       form {
         margin-left: 0;

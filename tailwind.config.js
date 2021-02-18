@@ -8,7 +8,7 @@ module.exports = {
       },
       borderColor: theme => ({
         ...theme('colors'),
-         DEFAULT: theme('colors.gray.300', 'currentColor'),
+         DEFAULT: theme('colors.gray.900', 'currentColor'),
         'primary': theme('colors.gray.900'),
         'secondary': theme('colors.primary'),
         'accent': '#e3342f',
@@ -43,7 +43,11 @@ module.exports = {
         '1/2': '50%',
         '1/3': 'calc(1/3)',
         '3/4': '75%',
-        '45': '45%'
+        '45': '45%',
+        '1/5': '20%',
+        '2/5': '40%',
+        '3/5': '60%',
+        '4/5': '80%',
       },
     },
   },

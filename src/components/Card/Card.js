@@ -14,7 +14,7 @@ const Card = ({ children, className }) => {
 
     return (
         <div 
-            className={`card__container bg-secondary border-2 border-primary ease-out w-full shadow-border transform transition-shadow duration-150 ${className}`}
+            className={`card__container p-2 bg-secondary border-2 border-primary ease-out w-full shadow-border transform transition-shadow duration-150 ${className}`}
             ref={ref}
             >
             { children }

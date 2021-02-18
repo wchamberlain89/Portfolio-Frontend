@@ -117,15 +117,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `@el7cosmos/gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `open sans`,
-          `fira code`,
-          `rajdhani` // you can also specify font weights and styles
+          {
+            family: `Rajdhani`,
+          },
+          {
+            family: `Fira Code`,
+          },
+          {
+            family: `Trebuchet MS`,
+          },
         ],
-        display: 'swap'
-      }
+      },
     },
     'gatsby-plugin-root-import'
   ],
