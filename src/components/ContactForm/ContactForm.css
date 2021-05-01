@@ -1,0 +1,25 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+  @apply font-body;
+ -webkit-box-shadow: 0 0 0 30px black inset !important;
+}
+
+input:-webkit-autofill
+{
+ -webkit-text-fill-color: #E2E2E2 !important;
+}
+
+.contact-form > label {
+  @apply font-accent tracking-tighter;
+}
+
+.contact-form-input, .contact-form-textarea {
+  @apply bg-accent text-gray-100 mb-5 bg-accent px-4 py-2 font-body;
+}
+
+.contact-form-textarea {
+  @apply h-20;
+}
